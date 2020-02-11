@@ -1,0 +1,22 @@
+import random
+
+random_user=random.randint(1,20)
+guess_limit=random.randint(1,10)
+print("user can choose any number from 1 to 20")
+
+while(guess_limit!=0):
+    guess_user=int(input("choose a number from 1 to 20"))
+    if random_user==guess_user:
+        print("your guess is correct!")
+        break
+    elif random_user-guess_user < 10:
+        guess_limit-=1
+        print("wrong answer but close")
+        print("you have ",guess_limit," chances")
+    else:
+        guess_limit-=1
+        print("you're far away")
+        print("you have ",guess_limit," chances")
+if(guess_limit==0):
+    print("you have run out of chances")
+
