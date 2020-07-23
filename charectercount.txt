@@ -1,0 +1,11 @@
+import pprint
+
+message = 'It was a bright cold day in april, and the clocks were striking thirteen.'
+count = {}
+
+for charecter in message.upper():
+    count.setdefault(charecter,0)
+    count[charecter] = count[charecter] + 1
+
+pprint.pprint(count)
+    
