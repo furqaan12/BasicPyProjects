@@ -1,0 +1,14 @@
+import random
+question = input('would you like to roll the dice [y/n]?\n')
+
+while question != 'n':
+    if question == 'y':
+        die1 = random.randint(1,6)
+        die2 = random.randint(1,6)
+        print(die1,die1)
+        question = input('would you like to roll the dice again [y/n]?\n')
+    else:
+        print('invalid response.Please type "y" or "n".')
+        question = input('would you like to roll the dice again [y/n]\n')
+
+print('good bye')
